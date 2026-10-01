@@ -26,10 +26,11 @@
     $descontoIdade% + $descontoCartao% = ".($descontoIdade+$descontoCartao)."%</h2>";
     echo "<h2 style='color:red; text-align:center;'>O valor final é: R$ $valorTotalFinal</h2>"; 
 
-    for ($parcelas=0; $parcelas <=6 ; $parcelas++) { 
+    /*for ($parcelas=1; $parcelas <=6 ; $parcelas++) { 
         $valorParc= $valorTotalFinal / $parcelas;
         echo "$parcelas x R$ $valorParc<br>";
-    }
+    }*/
+    $parcelas=1;
     while ($parcelas <= 6) {
         $valorParc= $valorTotalFinal / $parcelas;
         echo "$parcelas x R$ $valorParc<br>";
