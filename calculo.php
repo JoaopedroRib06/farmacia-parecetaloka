@@ -25,6 +25,16 @@
     echo "<h2 style='color:blue; text-align:center;'>Parabens $nome seu desconto foi de 
     $descontoIdade% + $descontoCartao% = ".($descontoIdade+$descontoCartao)."%</h2>";
     echo "<h2 style='color:red; text-align:center;'>O valor final é: R$ $valorTotalFinal</h2>"; 
+
+    for ($parcelas=0; $parcelas <=6 ; $parcelas++) { 
+        $valorParc= $valorTotalFinal / $parcelas;
+        echo "$parcelas x R$ $valorParc<br>";
+    }
+    while ($parcelas <= 6) {
+        $valorParc= $valorTotalFinal / $parcelas;
+        echo "$parcelas x R$ $valorParc<br>";
+        $parcelas++;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -32,6 +42,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farmácia Pareceteloka</title>
+    <link rel="stylesheet" href="farmacia.css">
 </head>
 <body>
     <h1>Parabens <?php echo $nome; ?></h1>
